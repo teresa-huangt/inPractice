@@ -20,6 +20,21 @@
 			  margin: 0 1.5% 24px 1.5%;
 			}
 
+
+			.floatL{
+				float: left;
+			}
+			.floatR{
+				float: right;
+			}
+
+
+			.top{
+				margin: 20px;
+				padding: 20px;
+			}
+
+
 			.way1-1-float-left{
 				float: left;
 				width: 60%;
@@ -28,9 +43,62 @@
 				float: right;
 				width: 30%;
 			}
-			.wway1-1-clearfloat{
+			.way1-1-clearfloat{
 				clear: both;
 			}
+
+			
+			.contain-float:before,
+			.contain-float:after {
+			  content: "";
+			  display: table;
+			}
+			.contain-float:after {
+			  clear: both;
+			}
+			.contain-float {
+			  clear: both;
+			  *zoom: 1;
+			}
+
+			.inline-block {
+			  display: inline-block;
+			  margin: 0 1.5%;
+			  width: 40%;
+			}
+			.top2{
+				margin-top: 10px;
+			}
+
+			.inline-block-hide {
+			  display: inline-block;
+			  margin: 0 1.5%;
+			  width: 47%;
+			}
+
+
+			.offset {
+			  left: 20px;
+			  position: relative;
+			  top: 20px;
+			}
+			.offset-absoluteL{
+			  left: 20px;
+			  position: absolute;
+			  top: 20px;
+			}
+
+
+			.parent-pos{
+				position: relative;
+			}
+			.offset-absoluteR{
+			  right: 20px;
+			  position: absolute;
+			  top: 20px;
+			  background: gray;
+			}
+
 		</style>
 	</head>
 
@@ -58,8 +126,53 @@ original
 
 <!--
 ==========================
+float 
+==========================
+-->
+	<h1>float</h1>>
+	<header>
+	  <code>&#60;header&#62;</code>
+	</header>
+
+	<section class = "floatL">
+	  <code>&#60;section&#62;</code>
+	</section>
+
+	<aside class = "floatR">
+	  <code>&#60;aside&#62;</code>
+	</aside>
+
+	<footer >
+	  <code>&#60;footer&#62;</code>
+	</footer>
+</html>
+
+<!--
+==========================
+float + width
+==========================
+-->
+	<h1>float+width</h1>>
+	<header>
+	  <code>&#60;header&#62;</code>
+	</header>
+
+	<section class = "way1-1-float-left">
+	  <code>&#60;section&#62;</code>
+	</section>
+
+	<aside class = "way1-1-float-right">
+	  <code>&#60;aside&#62;</code>
+	</aside>
+
+	<footer class=“top”>
+	  <code>&#60;footer&#62;</code>
+	</footer>
+</html>
+
+<!--
+==========================
 way1-1=float + clear float
-? x
 ==========================
 -->
 	<h1>way1-1=float + clear float</h1>>
@@ -80,4 +193,189 @@ way1-1=float + clear float
 	</footer>
 </html>
 
+<!--
+==========================
+way1-2=float + contain float
+==========================
+-->
+	<h1>way1-2=float + contain float</h1>>
+	<header>
+	  <code>&#60;header&#62;</code>
+	</header>
+	<div class = "contain-float">
+		<section class = "way1-1-float-left">
+		  <code>&#60;section&#62;</code>
+		</section>
 
+		<aside class = "way1-1-float-right">
+		  <code>&#60;aside&#62;</code>
+		</aside>
+	</div>
+	<footer>
+	  <code>&#60;footer&#62;</code>
+	</footer>
+
+<!--
+==========================
+way2=inline-block
+==========================
+-->
+	<h1>way2=inline-block</h1>>
+	<header>
+	  <code>&#60;header&#62;</code>
+	</header>
+
+	<section class = "inline-block">
+	  <code>&#60;section&#62;</code>
+	</section>
+
+	<aside class = "inline-block">
+	  <code>&#60;aside&#62;</code>
+	</aside>
+
+	<footer class = "top2">
+	  <code>&#60;footer&#62;</code>
+	</footer>
+</html>
+<!--
+==========================
+way2=inline-block（hiding space）
+==========================
+-->
+	<h1>way2=inline-block（hiding space）</h1>>
+	<header>
+	  <code>&#60;header&#62;</code>
+	</header>
+
+	<section class = "inline-block-hide">
+	  <code>&#60;section&#62;</code>
+	</section>
+
+	<aside class = "inline-block-hide">
+	  <code>&#60;aside&#62;</code>
+	</aside>
+
+	<footer class = "top2">
+	  <code>&#60;footer&#62;</code>
+	</footer>
+</html>
+
+<!--
+==========================
+way2-1=inline-block + no hiding(combine element)
+==========================
+-->
+	<h1>way2-1=inline-block + no hiding(combine element)</h1>>
+	<header>
+	  <code>&#60;header&#62;</code>
+	</header>
+
+	<section class = "inline-block-hide">
+	  <code>&#60;section&#62;</code>
+	</section><aside class = "inline-block-hide">
+	  <code>&#60;aside&#62;</code>
+	</aside>
+
+	<footer class = "top2">
+	  <code>&#60;footer&#62;</code>
+	</footer>
+</html>
+
+<!--
+==========================
+way2-2=inline-block + no hiding(combine comment)
+==========================
+-->
+	<h1>way2-2=inline-block + no hiding(combine comment)</h1>>
+	<header>
+	  <code>&#60;header&#62;</code>
+	</header>
+
+	<section class = "inline-block-hide">
+	  <code>&#60;section&#62;</code>
+	</section><!--
+	reccommode this way，because we can write sth to separate two parts
+	--><aside class = "inline-block-hide">
+	  <code>&#60;aside&#62;</code>
+	</aside>
+
+	<footer class = "top2">
+	  <code>&#60;footer&#62;</code>
+	</footer>
+</html>
+
+<!--
+==========================
+way3-1=position-relative(in flow)
+==========================
+-->
+	<h1>way3-1=position-relative(in flow)</h1>
+	<div>
+	  <code>&#60;div&#62;</code>
+	</div>
+
+	<div class="offset">
+	  <code>&#60;div class= <br> "offset"&#62;</code>
+	</div>
+
+	<div>
+	  <code>&#60;div&#62;</code>
+	</div>
+<!--
+==========================
+way3-1=position-relative(in flow) +parent ele
+==========================
+-->
+	<h1>way3-1=position-relative(in flow) +parent ele</h1>
+	<div>
+		<div>
+		  <code>&#60;div&#62;</code>
+		</div>
+
+		<div class="offset">
+		  <code>&#60;div class= <br> "offset"&#62;</code>
+		</div>
+
+		<div>
+		  <code>&#60;div&#62;</code>
+		</div>
+	</div>
+
+
+<!--
+==========================
+way3-2=position-absolute(not in flow)
+==========================
+-->
+	<h1>way3-2=position-absolute(not in flow)</h1>
+	<div>
+	  <code>&#60;div&#62; 2nd box position according to the whole page  </code>
+	</div>
+
+	<div class="offset-absoluteL">
+	  <code>&#60;div class= <br> "offset"&#62;</code>
+	</div>
+
+	<div>
+	  <code>&#60;div&#62;</code>
+	</div>
+<!--
+==========================
+way3-2=position-absolute(not in flow)+parent ele
+==========================
+-->
+	<h1>way3-2=position-absolute(not in flow)+parent ele</h1>
+	<div class = "parent-pos">
+		<code>&#60;parent ele&#62; <br> position: relative;</code>
+		<div>
+		  <code>&#60;div&#62; </code>
+		</div>
+
+		<div >
+		  <code class="offset-absoluteR">&#60;div class= <br> "offset"&#62;</code>
+		</div>
+
+		<div>
+		  <code>&#60;div&#62;</code>
+		</div>
+	</div>
