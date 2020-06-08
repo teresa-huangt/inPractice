@@ -18,11 +18,18 @@
 
 		<!--font-size-->
 		<h1>font-size</h1>
-		<p style = "font-size: 10px">font-size = 10px</p>
+		<p style = "font-size: 15px">font -size=15</p>
+		<p style = "font-size: 30px">font -size=30</p>
 
 		<!--font-variant-->
 		<h1>font-variant</h1>
-		<p style = "font-variant: small-caps">font-variant = small-caps</p>
+		<p style = "font-variant: normal">font-variant=normal</p>
+		<p style = "font-variant: small-caps">font-variant=small-caps, pay more attention to 's' of caps</p>
+
+		<!--font-style-->
+		<h1>font-style</h1>
+		<p style = "font-style: italic">font-style=italic</p>
+		<p style = "font-style: oblique">font-style=oblique; look same with italic, difference in oblique is a oblique version of vertical normal，italic may change the font itself/p>
 
 		<!--font-weight-->
 		<h1>font-weight</h1>
@@ -34,6 +41,28 @@
 		<p style = "font-family: Times New Roman; font-weight: 100">
 			font-weight: 100 close400<br>Attempting to use a weight that’s not available for a given typeface will cause those styles to default to the closest value. For example, the Times New Roman typeface comes in two weights: normal, or 400, and bold, or 700. Attempting to use a weight of 900 will default the typeface to the closest related weight, 700 in this case.</p>
 		<p style = "font-family: Times New Roman; font-weight: 900">	font-weight: 900 close700<br>Attempting to use a weight that’s not available for a given typeface will cause those styles to default to the closest value. For example, the Times New Roman typeface comes in two weights: normal, or 400, and bold, or 700. Attempting to use a weight of 900 will default the typeface to the closest related weight, 700 in this case.</p>
+
+		<!--line height-->
+		<h1>line height</h1>
+		<p style = "line-height: normal">keyword-normal: The best practice for legibility is to set the line-height to around one and a half times our font-size property value. This could be quickly accomplished by setting the line-height to 150%, or just 1.5.</p>
+		<p style = "line-height: 150%">percentage-150%: The best practice for legibility is to set the line-height to around one and a half times our font-size property value. This could be quickly accomplished by setting the line-height to 150%, or just 1.5.</p>
+		<p style = "line-height: 1.5">number-1.5: The best practice for legibility is to set the line-height to around one and a half times our font-size property value. This could be quickly accomplished by setting the line-height to 150%, or just 1.5.</p>
+		<p style = "height: 22px; line-height: 22px">Using the same property value for the line-height and height properties will<br> vertically center the text</p>
+
+		<!--font-shorthand value-->
+		<h1>font-shorthand value</h1>
+		<p>style = "font: italic small-caps bold 14px/22px 'Helvetica Neue', Helvetica, Arial, sans-serif"</p>
+		<p style = "font: italic small-caps bold 14px/22px 'Helvetica Neue', Helvetica, Arial, sans-serif">from left to right: font-style, font-variant, font-weight, font-si'e, line-height, and font-family <br>without the use of commas (except for font names, as the font-family property value uses commas). <br>A forward slash, /, separator is needed between the font-size and line-height property values</p>
+		<p>delete one parameter in shorthand eg:bold</p>
+		<p style = "font: italic small-caps  14px/22px 'Helvetica Neue', Helvetica, Arial, sans-serif">from left to right: font-style, font-variant, font-weight, font-si'e, line-height, and font-family <br>without the use of commas (except for font names, as the font-family property value uses commas). <br>A forward slash, /, separator is needed between the font-size and line-height property values</p>
+
+		<!--text-align-->
+		<h1>text-align</h1>
+		<p style = "text-align: justify; width:200px">justify <br>(no change within width)<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.</p>
+		<p style = "text-align: right">right<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.</p>
+		
+
+
 
 
 	</body>
