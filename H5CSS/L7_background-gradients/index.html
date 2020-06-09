@@ -3,27 +3,40 @@
 	<head>
 		<meta charset="utf-8">
 		<title>inPractice</title>
-		 <style type="text/css">
-		 	div {
-				  background-color: #f03434;
-				  background-color: rgba(226, 106, 106, 0.2);
-				}
-		</style>
+		<!--
+		<link rel="stylesheet" type="text/css" href="stylesheets/reset.css">
+		-->
 	</head>
-	<body>
-		<!--background color-->
-		<h1>background color</h1>
-		<p style = "background-color: #00b5cc; background-color:rgba(226, 106, 106, 0.2)">style = "background-color: #f03434 (blue); background-color:rgba(226, 106, 106, 0.2)(pink)"<br>The first background-color property will use a “safe” background color, such as a hexadecimal value, and the second background-color property will use an RGBa or HSLa value. Here, if a browser understands the RGBa or HSLa value it will render it, and if it doesn’t, it will fall back to the hexadecimal value above it.</div>
 
-		<!--background image-->
-		<h1>background image</h1>
-		<div style = "background-image: url(unnamed.jpg); width: 100%; height: 100px">
-		add background image
+	<body style = "background-image: url(color.jpg);background-repeat: repeat-y; background-position: 100% 0">
+		<div style = "background: #b2b2b2 url('red.jpg') 20px 10px repeat-x;">
+			<!--background color-->
+			<h1>background color</h1>
+			<p style = "background-color: #00b5cc; background-color:rgba(226, 106, 106, 0.2)">style = "background-color: #f03434 (blue); background-color:rgba(226, 106, 106, 0.2)(pink)"<br>The first background-color property will use a “safe” background color, such as a hexadecimal value, and the second background-color property will use an RGBa or HSLa value. Here, if a browser understands the RGBa or HSLa value it will render it, and if it doesn’t, it will fall back to the hexadecimal value above it.</p>
+
+			<!--background image-->
+			<h1>background image</h1>
+			<p style = "background-image: url(unnamed.jpg); width: 500px; height: 500px; background-repeat: repeat; ">
+			add background image + w 500px h 500px; without enough width & height, size is unnormal; defaut is repeat xy (false repeat x) 
+			</p>
+			<p style = "background-image: url(unnamed.jpg); width: 500px; height: 500px; background-position: 10px 10px; ">
+			add this new part, above backgroup repeat-y is not working;<br>
+			add style in "body" will work considering the whole hide size, see the following backgroud-position example
+			</p>
+
+			<!--background position-->
+			<h1>background position</h1>
+			in "body" style = "background-image: url(color.jpg);background-repeat: repeat-y; background-position: 100% 0" <br> same as background-position: top right<br> pay attention to top left, other white backgroud part will overlap on it.
+
+			<!--background shorthand-->
+			<h1>background shorthand</h1>
+			<p> the gray and red background is added in new div within body ( style = "background: #b2b2b2 url('red.jpg') 20px 10px repeat-x;)(cannot see red color= '' in "") (since div so part red color)</p>
+
+			<!--background gradient-->
+			<h1>background gradient</h1>
+			<p style = "background: linear-gradient(to right bottom, #648880, #293f50)">background: linear-gradient(to right bottom, #648880, #293f50); <br>default is top to bottom if no direction keyword</p>
+
 		</div>
-
-
-
-
 	</body>
 
 </html>
