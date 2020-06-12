@@ -39,6 +39,69 @@
 			<p style = "background: linear-gradient(to right, #f6f1d3, #648880 85%, #293f50)">3color + set 2nd color position 85%<br>background: linear-gradient(to right, #f6f1d3, #648880 85%, #293f50</p>
 			<p style = "background: linear-gradient(to right, rgba(151,202,222,0.97) 0%, rgba(41,227,91,0.98) 43%, rgba(41,227,91,0.99) 63%, rgba(188,224,238,1) 100%);)"><a href="https://www.cssmatic.com/gradient-generator#'\-moz\-linear\-gradient\%28left\%2C\%20rgba\%28151\%2C202\%2C222\%2C0\.97\%29\%200\%25\%2C\%20rgba\%2841\%2C227\%2C91\%2C0\.98\%29\%2043\%25\%2C\%20rgba\%2841\%2C227\%2C91\%2C0\.99\%29\%2063\%25\%2C\%20rgba\%28188\%2C224\%2C238\%2C1\%29\%20100\%25\%29\%3B">gradient generator</a><br>click in any position of the bar to put dot, choose center of dot to change color</p>
 
+			<!--multiple background-->
+			<h1>multiple background</h1>
+			<div style = "background:  url('red.jpg') 0 0 no-repeat, url('color.jpg') 0 0 no-repeat, url('unnamed.jpg') 0 0 no-repeat;">
+				3 pic in background
+			</div>
+
+			<!--background size-->
+			<h1>background size</h1>
+			<div style = "background:  url('red.jpg') 0 0 no-repeat; background: url('color.jpg') 0 0 no-repeat; background-size: 100px 100px">
+				cannot see all in div 
+			</div>
+
+			<!--background size-->
+			<h1>background size</h1>
+			<div style = "background:  url('unnamed.jpg'); background-repeat: no-repeat; width: 300px; height: 300px; border: 1px solid black; margin-bottom: 1em; background-size: cover ">
+				cover ；related the whole width and height, change to samller to test
+			</div>
+			<div style = "background:  url('unnamed.jpg'); background-repeat: no-repeat;width: 300px; height: 300px; border: 1px solid black; margin-bottom: 1em; background-size: contain ">
+				contain 
+			</div>
+
+			<!--background clip-->
+			<h1>background clip</h1>
+			<div style = "border: 5px dotted black;padding: 15px; background: url('color.jpg');background-clip: border-box">		background-clip: border-box
+			</div>
+			<div style = "border: 5px dotted black;padding: 50px; margin: 20px 0;background: url('color.jpg');background-clip: padding-box">		background-clip: padding-box + padding50px; comparing with border-box
+			</div>
+			<div style = "border: 5px dotted black;padding: 15px; margin: 20px 0;background: url('color.jpg');background-clip: content-box">		background-clip: content-box
+			</div>
+
+			<!--background origin-->
+			<h1>? background origin</h1>
+			<div style = "border: 5px dotted black;padding: 15px; background: url('unnamed.jpg') no-repeat;background-size: contain; background-origin: border-box">		
+				background-origin: border-box
+			</div>
+			<div style = "margin: 20px 0; border: 5px dotted black;padding: 15px; background: url('color.jpg') no-repeat;background-size: contain; background-origin: padding-box">		background-origin: padding-box; Q=connot work change to color.jpg (work well in above section) A=add no-repeat (？above section could work without no-repaet with backgtound-clip)
+			</div>
+			<div style = "margin: 20px 0; border: 5px dotted black;padding: 15px; background: url('unnamed.jpg') no-repeat;background-size: contain; background-origin: content-box">		
+				background-origin: conten-box; Q=odd A=add no-repeat
+			</div>
+
+			<!--min-width-->
+			<h1>? min-width</h1>
+			<div style = "background: url('unnamed.jpg') no-repeat; min-width: 500px">		
+				with min-width 500px
+			</div>
+			<div style = "background: url('unnamed.jpg') no-repeat;">		
+				without min-width
+			</div>
+
+			<div style = "background-color: lightblue; min-width: 100px; display: inline-block;">		
+				with min-width 100px
+			</div>
+			<div style = "background-color: lightblue;">		
+				without min-width
+			</div>
+
+
+		
+
+
+
+
 
 
 
