@@ -7,7 +7,7 @@
 	<!--<link rel="stylesheet" type="text/css" href="stylesheets/reset.css"> -->
 </head>
 
-<body>
+<body id = "backTop">
 	<!--display level-->
 	<h1>display level</h1>
 	<h2>default img=inline block level</h2>
@@ -29,10 +29,54 @@
 	<p>normal text <strong>semantically important text</strong> normal text</p>
 
 	<!--em VS i-->
-	<h1>strong VS b</h1>
+	<h1>em VS i</h1>
 	<p>normal text <i>text that is set off from the normal prose, such a foreign word, fictional character thoughts, or when the text refers to the definition of a word instead of representing its semantic meaning</i> normal text</p>
 	<p>normal text <em>semantically emphasis text</em> normal text</p>
 	<p>above=By default, the visual result is the same. However, the semantic meaning is different.</p>
+
+	<!--H1 degraded in section level-->
+	<h1>H1 degraded in section level</h1>
+	<h1>H1 Marker (section...)</h1>
+	<h2>H2 Marker</h2>
+	<h3>H3 Marker</h3>
+
+	<section>
+	  <h1>H1 in section = H2</h1>
+	    <section>
+	      <h1>H1 in two level section = H3</h1>
+	     </section>
+	</section>
+
+	<section>
+	  <h2>H2 in section = H2</h2>
+	    <section>
+	      <h2>H2 in two level section = H2</h2>
+	     </section>
+	</section>
+
+	<section>
+	  <h2>H2 in section = H2</h2>
+	  <section>
+	    <h3>H3 in two level section = H3</h3>
+	  </section>
+	</section>
+
+	<!--symbol-->
+	<h1>symbol</h1>
+	<p>August 24&ndash;26th &mdash; Chicago, IL<br>&copy<br>resum&eacute;</p>
+
+	<!--mail-->
+	<h1>mail</h1>
+	<a href=mailto:shay@awesome.com.>mail</a>
+	<br>
+	<a href="mailto:shay@awesome.com?subject=Reaching%20Out&body=How%20are%20you%0ANext%20line">Email with subject and body</a>
+	<p> ? between mail address and others; %20 = space; & betw subject and body; %0 = next line
+
+	<!--local link-->
+	<h1>local link</h1>
+	<a href="#backTop">Back to top</a>
+
+
 
 
 </body>
