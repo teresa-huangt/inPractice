@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>inPractice</title>
+	<!--<link rel="stylesheet" type="text/css" href="stylesheets/reset.css"> -->
+	<style type="text/css">
+		p{background-color: gray;}
+		#id{background-color: blue}
+		.backRed{background-color: red}
+
+		.hotdog p {
+		  background: brown;
+		}
+		p.mustard {
+		  background: yellow;
+		}
+		.mustard {
+		  background: blue;
+		}
+		p.mustard3 {
+		  background: olive;
+		}
+		.hotdog p.mustard {
+		  background: lime;
+		}
+
+		.btn {
+		  font-size: 16px;
+		  background: blue;
+		}
+		.btn-danger {
+		  background: green;
+		}
+		.btn-success {
+		  background: green;
+		}
+		.ttt {
+		  background: red;
+		}
+
+	
+	</style>
+</head>
+
+<body>
+	<!--Specificity-->
+	<h1>Specificity</h1>
+	<p id = "backBlue" class = "backRed" > test Specificity</p>
+
+	<!--combine selectors-->
+	<h1>combine selectors</h1>
+	<div class="hotdog">
+	  <p>...</p>
+	  <p>...</p>
+	  <p class="mustard">...</p>
+	</div>
+	<p class="mustard mustard2 mustard3">...</p>
+
+	<!--Layering Styles with Multiple Classes-->
+	<h1>Layering Styles with Multiple Classes</h1>
+	<div class="ttt">
+		<a class="btn">...</a>
+		<a class="btn btn-danger ttt">...</a>
+		<a class="btn btn-success">...</a>
+	</div>
+
+	<!--Length-->
+	<h1>Length</h1>
+	<p style = "font-size: 16px">normal lineheight<br>normal lineheight</p>
+	<p style = "font-size: 16px; line-height: 2em">These paragraphs have a calculated line-height of: 2emx16px = 32px.<br>These paragraphs have a calculated line-height of: 2emx16px = 32px.</p>
+	<p style = "font-size: 150%">font-size: 150%<br>font-size: 150%</p>
+
+
+
+
+
+
+	
+
+
+</body>
+
+</html>
