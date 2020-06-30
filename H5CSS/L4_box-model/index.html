@@ -3,28 +3,25 @@
   <head>
     <meta charset="utf-8" />
     <title>Practice</title>
-    <!-- 
-			p1 = border-box VS. content-box;
-			p2 = border-box, padding*2 > width/height;
-			p3 = 1/2/4 value;
-		-->
     <style type="text/css">
-      div {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        width: 200px;
-        height: 100px;
-        padding: 20px;
-        margin: 20px;
-        border: 5px dotted #9799a7;
-      }
+
     </style>
   </head>
 
   <body>
-    <div>
-      <p>Box Size</p>
-    </div>
+    <!--display-->
+    <h1>display</h1>
+    <p>block = new line; inline = not new line; inline-block = not new line but could modify box properties</p>
+    <div style="border: 1px solid black; display: inline">Hello World; display=inline</div>
+    <div style="border: 1px solid black; display: inline">Hello World; display=inline</div>
+    <div style="border: 1px solid black; display: block">Hello World; display=block</div>
+    <div style="border: 1px solid black; display: block">Hello World; display=block</div>
+    <div style="border: 1px solid black; display: inline-block;height: 50px">Hello World</div>
+    <div style="border: 1px solid black; display: inline-block">Hello World</div>
+    
+    <img style = "display: block" src="bar.png" alt="the grey bar picture">
+    <img style = "display: inline" src="bar.png" alt="the grey bar picture">
+     <img style = "display: inline" src="bar.png" alt="the grey bar picture">
+
   </body>
 </html>

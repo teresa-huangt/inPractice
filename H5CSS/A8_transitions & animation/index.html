@@ -4,6 +4,23 @@
     <meta charset="utf-8" />
     <title>Practice</title>
     <style type="text/css">
+      .boxAll {
+        background: #2db34a;
+        border-radius: 6px;
+        cursor: pointer;
+        height: 95px;
+        line-height: 95px;
+        text-align: center;
+
+        transition-property: background;
+        transition-duration: 1s;
+        transition-timing-function: linear;
+        width: 95px;
+      }
+      .boxAll:hover {
+        background: #ff7b29;
+      }
+
       .box {
         background: #2db34a;
         border-radius: 6px;
@@ -11,12 +28,14 @@
         height: 95px;
         line-height: 95px;
         text-align: center;
+      }
+      .boxDetail{
         transition-property: background;
         transition-duration: 1s;
         transition-timing-function: linear;
         width: 95px;
       }
-      .box:hover {
+      .box:hover .boxDetail {
         background: #ff7b29;
       }
     </style>
@@ -28,9 +47,19 @@
     transitions
     ======================
     -->
-    <h1>transitions</h1>
-    <div class="box">
+    <h1>transitions; one set div</h1>
+      <div class="boxAll">
        Box; 
-    </div>
-    <p>? two set div with box and box-detail defining different parameters</p>
+      </div>
+
+    <h1>transitions; two sets div</h1>
+    <div class="box">
+      <div class="boxDetail">
+         Box; 
+      </div>
+   </div>
+  
+
+
+
   </body>
