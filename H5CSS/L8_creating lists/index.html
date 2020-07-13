@@ -5,6 +5,11 @@
 	<meta charset="utf-8">
 	<title>inPractice</title>
 	<!-- <link rel="stylesheet" type="text/css" href="stylesheets/reset.css"> -->
+	<style type="text/css">
+		.pesudo li:last-child {
+			margin-right: 0;
+		}
+	</style>
 </head>
 
 <body>
@@ -93,6 +98,45 @@
 	  <li>shorthand list style proerty: list-style: square outside...<br>– One of the best desserts known to ever exist, especially when topped with cream cheese frosting</li>
 	  <li>Sprinkles...– One of the best desserts known to ever exist, especially when topped with cream cheese frosting</li>
 	</ul>
+
+	<!--horizontally display list-->
+	<h1> horizontally display list-way1-inline-block</h1>
+	<ul>
+		<li style = "display: inline-block; margin: 0 10px">Orange</li>
+		<li style = "display: inline-block; margin: 0 10px">Green</li>
+		<li style = "display: inline-block; margin: 0 10px">Blue</li>
+	</ul>
+	<ul>
+		<li style = "display: inline-block; margin: 20px">Orange</li>
+		<li style = "display: inline-block; margin: 20px">Green</li>
+		<li style = "display: inline-block; margin: 20px">Blue</li>
+	</ul>
+
+	<h1> horizontally display list-way2-float</h1>
+	<p> ? with marker comparing with above way1 </p>
+	<ul>
+		<li style = "float: left; margin: 20px">Orange</li>
+		<li style = "float: left; margin: 20px">Green</li>
+		<li style = "float: left; margin: 20px">Blue</li>
+	</ul>
+
+	<!--pseudo-class selector to identify the last li-->
+	<h1 style = "clear: both"> ? pseudo-class selector to identify the last li</h1>
+	<p>we’ll use the :last-child pseudo-class selector to identify the last li  element and reset its right margin to 0. Doing so ensures that any horizontal space between the li element and the edge of its parent element is removed.</p>
+
+	<ul class="pseudo">
+		<li style = "float: left; margin: 20px">Orange</li>
+		<li style = "float: left; margin: 20px">Green</li>
+		<li style = "float: left; margin: 20px">Blue</li>
+	</ul>
+	<ul class="pseudo" style = "clear: both">
+		<li style = "float: left;">Orange</li>
+		<li style = "float: left;">Green</li>
+		<li style = "float: left;">Blue</li>
+	</ul>
+
+
+
 
 
 
