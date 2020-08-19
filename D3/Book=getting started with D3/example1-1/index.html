@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<!-- <script src="d3.js"></script> -->
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+
+	<script>
+		function dict2string(dict) {
+			d = d3.entries(dict);
+			string = ''
+			for (var i = 0; i < d.length; i++) {
+				string += d[i].key
+				string += ': '
+				string += d[i].value
+				string += ', '
+			}
+			return string
+		}
+		function draw(data) {
+			// Draw function
+			// "use strict";
+			console.log('--');
+			console.log(data);
+			d3.select('body')
+				.append('ul').selectAll('ul')
+				.data(d3.entries(data))
+				.enter().append('li')
+				.text(function (mao) { return mao.key })
+
+				.append('ol').selectAll('ol')
+				.data(function (d) { return d.value })
+				.enter().append('li')
+				.text(function (d) { return dict2string(d) })
+			return true
+		}
+		function is_success(inp) {
+			console.log(inp)
+		}
+	</script>
+</head>
+
+<body>
+	<h1>Title</h1>
+	<script>
+		d3.json("/data/plaza_traffic.json").then(draw).then(is_success);
+		// d3.json("/data/service_status.json").then(draw).then(is_success);
+		// d3.json("http://localhost:8000/data/plaza_traffic.json").then(function (data) {
+			// console.log('---')
+		// })
+	</script>
+</body>
+
+</html>
